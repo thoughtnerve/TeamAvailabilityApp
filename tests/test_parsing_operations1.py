@@ -1,16 +1,17 @@
-import unittest
-import json
-import azure.functions as func
-from tabulate import tabulate
-import sys
-import os
 
-# Add parent directory to Python path for imports
+import sys# Add parent directory to Python path for imports
+import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from parsing_operations import parse_schedule_query
 from typing import Dict, List
 import pandas as pd
 import openpyxl
+import unittest
+import json
+import azure.functions as func
+from tabulate import tabulate
+
+
 
 class MockHttpRequest:
     def __init__(self, body=None):
